@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains svg styles.
 // -----------------------------------------------------------------------------
+
+.sw-svg--search {
+  @include sw-size(20px);
+
+  fill: rgba($c-secondary, 0.6);
+}
+
+.sw-svg--search-small {
+  @include sw-size(15px);
+}
+
+.sw-svg--sunrise,
+.sw-svg--sunset {
+  @include sw-size(140px, 120px);
+
+  margin: 0 0 -20px;
+}
+
+.sw-svg--sunrise {
+  fill: $c-sunrise;
+}
+
+.sw-svg--sunset {
+  fill: $c-sunset;
+}

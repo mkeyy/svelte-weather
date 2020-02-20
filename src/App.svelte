@@ -2,10 +2,9 @@
     import Home from './components/Home.svelte';
     import City from './components/City.svelte';
 
-    import {search} from './stores';
+    import {search, data} from './stores';
 
     let searchVal = null;
-    let city = null;
 
     search.subscribe(v => {
         searchVal = v;
@@ -13,18 +12,18 @@
         if (searchVal) {
             fetch(`${process.env.API_URL}?q=${$search}&appid=${process.env.API_KEY}&units=metric`)
                     .then(res => res.json())
-                    .then(data => {
-                        city = data;
-                        {console.log(city)}
+                    .then(json => {
+                        data.set(json);
+                        {console.log($data)}
                     })
         }
     })
 </script>
 
-{#if !$search }
+{#if !$data }
     <Home/>
 {:else }
-    <City {city}/>
+    <City/>
 {/if}
 
 <style lang="scss" global>

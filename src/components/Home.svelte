@@ -1,5 +1,5 @@
 <script>
-    import Search from './Search.svelte';
+    import Search from './parts/Search.svelte';
 </script>
 
 <div class="sw-app sw-app--home">
@@ -24,6 +24,7 @@
 
     h1 {
         font-size: 100px;
-        margin: 0 0 30px;
+        line-height: 1.1;
+        margin: 0 0 20px;
     }
 </style>

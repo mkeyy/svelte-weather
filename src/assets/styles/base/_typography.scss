@@ -9,12 +9,8 @@ body {
   letter-spacing: 0;
 }
 
-h1,
-h2,
-h3,
-.sw-h1,
-.sw-h2,
-.sw-h3 {
+h1, h2, h3,
+.sw-h1, .sw-h2, .sw-h3 {
   font-family: $f-fancy;
   font-weight: 400;
   text-transform: uppercase;
@@ -23,8 +19,7 @@ h3,
   color: $c-font;
 }
 
-h1,
-.sw-h1 {
+h1, .sw-h1 {
   font-size: 32px;
   line-height: 30px;
 
@@ -39,8 +34,7 @@ h1,
   }
 }
 
-h2,
-.sw-h2 {
+h2, .sw-h2 {
   font-size: 24px;
   line-height: 29px;
 
@@ -55,8 +49,7 @@ h2,
   }
 }
 
-h3,
-.sw-h3 {
+h3, .sw-h3 {
   font-size: 20px;
   line-height: 24px;
 
@@ -66,8 +59,7 @@ h3,
   }
 }
 
-p,
-span {
+p, span {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -88,8 +80,7 @@ strong {
   font-weight: 700;
 }
 
-a,
-button {
+a, button {
   @include sw-on-event(true) {
     text-decoration: none;
     box-shadow: none;
