@@ -1,6 +1,8 @@
 <script>
+    import Header from './components/Header.svelte';
     import Home from './components/Home.svelte';
     import City from './components/City.svelte';
+    import Footer from './components/Footer.svelte';
 
     import {search, data} from './stores';
 
@@ -14,7 +16,9 @@
                     .then(res => res.json())
                     .then(json => {
                         data.set(json);
-                        {console.log($data)}
+                        {
+                            console.log($data)
+                        }
                     })
         }
     })
@@ -23,14 +27,21 @@
 {#if !$data }
     <Home/>
 {:else }
+    <Header/>
     <City/>
 {/if}
+
+<Footer/>
 
 <style lang="scss" global>
     @import "assets/styles/global.scss";
 
     .sw-app {
+        position: relative;
+        display: grid;
+        grid-template-areas: "header" "content" "footer";
+        grid-template-rows: 80px auto 55px;
         min-height: 100vh;
-        background: linear-gradient(120deg, $c-gradient-primary 10%, $c-gradient-secondary 60%, $c-gradient-tertiary 100%);;
+        background: linear-gradient(120deg, $c-gradient-primary 10%, $c-gradient-secondary 60%, $c-gradient-tertiary 100%);
     }
 </style>

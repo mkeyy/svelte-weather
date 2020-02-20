@@ -35,7 +35,6 @@
     .sw-wind {
         display: flex;
         grid-area: wind;
-        padding: 40px 0 0;
     }
 
     .sw-compass {

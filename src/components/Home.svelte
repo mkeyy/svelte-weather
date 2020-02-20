@@ -2,24 +2,26 @@
     import Search from './parts/Search.svelte';
 </script>
 
-<div class="sw-app sw-app--home">
-    <div class="sw-container">
-        <div class="sw-home">
-            <h1>Weather App</h1>
-            <Search/>
-        </div>
+<main class="sw-home sw-container">
+    <div class="sw-content">
+        <h1>Weather App</h1>
+        <Search/>
     </div>
-</div>
+</main>
 
 <style lang="scss">
     @import "../assets/styles/settings.scss";
+
+    .sw-home {
+        grid-area: content;
+    }
 
     .sw-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100%;
     }
 
     h1 {

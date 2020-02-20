@@ -1,5 +1,5 @@
 <script>
-    import AssetSVG from '../AssetSVG.svelte';
+    import AssetSVG from '../helpers/AssetSVG.svelte';
     import icSearch from '../../assets/img/ic-search.svg';
 
     import {search} from '../../stores';

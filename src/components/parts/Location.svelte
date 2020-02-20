@@ -22,40 +22,40 @@
 
     .sw-location {
         grid-area: location;
+    }
 
-        h1 {
-            font-size: 80px;
-            line-height: 1;
+    h1 {
+        font-size: 80px;
+        line-height: 1;
 
-            > span {
-                font-size: 40px;
-            }
+        > span {
+            font-size: 40px;
         }
+    }
 
-        .sw-coordinates span {
+    .sw-coordinates span {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .sw-coordinates span + span {
+        margin-left: 10px;
+    }
+
+    .sw-stats {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba($c-secondary, 0.5);
+        padding: 40px 0 0;
+        margin: 40px 0;
+
+        span {
+            display: block;
             font-size: 20px;
+            font-weight: 300;
             line-height: 1;
-        }
-
-        .sw-coordinates span + span {
-            margin-left: 10px;
-        }
-
-        .sw-stats {
-            display: flex;
-            flex-direction: column;
-            border-top: 1px solid rgba($c-secondary, 0.5);
-            padding: 40px 0 0;
-            margin: 40px 0;
-
-            span {
-                display: block;
-                font-size: 20px;
-                font-weight: 300;
-                line-height: 1;
-                letter-spacing: 1px;
-                margin: 0 0 15px;
-            }
+            letter-spacing: 1px;
+            margin: 0 0 15px;
         }
     }
 </style>

@@ -1,5 +1,5 @@
 <script>
-    import AssetSVG from '../AssetSVG.svelte';
+    import AssetSVG from '../helpers/AssetSVG.svelte';
     import icSunrise from '../../assets/img/ic-sunrise.svg';
     import icSunset from '../../assets/img/ic-sunset.svg';
 
@@ -40,7 +40,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px 0 0;
     }
 
     .sw-sunrise,
