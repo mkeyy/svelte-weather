@@ -10,8 +10,8 @@
     </div>
 
     <div class="sw-stats">
-        <span>Temp min: <strong>{$data.main.temp_min}&#8451;</strong></span>
-        <span>Temp max: <strong>{$data.main.temp_max}&#8451;</strong></span>
+        <span>Temp min: <strong>{Math.round($data.main.temp_min)}&#8451;</strong></span>
+        <span>Temp max: <strong>{Math.round($data.main.temp_max)}&#8451;</strong></span>
         <span>Pressure: <strong>{$data.main.pressure} hPa</strong></span>
         <span>Humidity: <strong>{$data.main.humidity}%</strong></span>
     </div>

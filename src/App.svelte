@@ -7,22 +7,18 @@
 
     import {search, data} from './stores';
 
-    let loading = false;
-
     search.subscribe(() => {
         if ($search) {
-            loading = true;
             fetch(`${process.env.API_URL}?q=${$search}&appid=${process.env.API_KEY}&units=metric`)
                     .then(res => res.json())
                     .then(json => {
                         data.set(json);
-                        loading = false;
                     })
         }
     })
 </script>
 
-{#if !$search && !$data }
+{#if !$data }
     <Home/>
 {:else if $data && $data.cod === 200}
     <Header/>
