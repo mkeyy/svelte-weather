@@ -20,17 +20,15 @@ h1, h2, h3,
 }
 
 h1, .sw-h1 {
-  font-size: 32px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 1;
 
   @media (min-width: $media-sm) {
     font-size: 45px;
-    line-height: 45px;
   }
 
   @media (min-width: $media-lg) {
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 90px;
   }
 }
 

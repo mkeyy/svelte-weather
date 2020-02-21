@@ -48,7 +48,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 20px;
+        margin: 0 10px;
+
+        @media (min-width: $media-lg) {
+            margin: 0 20px;
+        }
     }
 
     .sw-title {
@@ -60,10 +64,17 @@
     }
 
     .sw-line {
-        @include sw-size(200px, 3px);
+        @include sw-size(100%, 3px);
 
         display: block;
+        max-width: 200px;
         border-radius: 5px;
         background-color: rgba($c-secondary, 0.5);
+    }
+
+    span {
+        font-size: 14px;
+        line-height: 1.1;
+        white-space: nowrap;
     }
 </style>

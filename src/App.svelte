@@ -2,33 +2,33 @@
     import Header from './components/Header.svelte';
     import Home from './components/Home.svelte';
     import City from './components/City.svelte';
+    import Error from './components/Error.svelte';
     import Footer from './components/Footer.svelte';
 
     import {search, data} from './stores';
 
-    let searchVal = null;
+    let loading = false;
 
-    search.subscribe(v => {
-        searchVal = v;
-
-        if (searchVal) {
+    search.subscribe(() => {
+        if ($search) {
+            loading = true;
             fetch(`${process.env.API_URL}?q=${$search}&appid=${process.env.API_KEY}&units=metric`)
                     .then(res => res.json())
                     .then(json => {
                         data.set(json);
-                        {
-                            console.log($data)
-                        }
+                        loading = false;
                     })
         }
     })
 </script>
 
-{#if !$data }
+{#if !$search && !$data }
     <Home/>
-{:else }
+{:else if $data && $data.cod === 200}
     <Header/>
     <City/>
+{:else}
+    <Error/>
 {/if}
 
 <Footer/>
@@ -40,7 +40,7 @@
         position: relative;
         display: grid;
         grid-template-areas: "header" "content" "footer";
-        grid-template-rows: 80px auto 55px;
+        grid-template-rows: auto 1fr auto;
         min-height: 100vh;
         background: linear-gradient(120deg, $c-gradient-primary 10%, $c-gradient-secondary 60%, $c-gradient-tertiary 100%);
     }

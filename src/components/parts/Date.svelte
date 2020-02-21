@@ -26,9 +26,16 @@
     @import "../../assets/styles/settings.scss";
 
     .sw-date {
+        order: 1;
         font-family: $f-fancy;
         font-size: 15px;
         line-height: 1;
         color: $c-secondary;
+        margin: 0 0 10px;
+
+        @media (min-width: $media-lg) {
+            order: 2;
+            margin: 0;
+        }
     }
 </style>

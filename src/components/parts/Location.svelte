@@ -24,18 +24,25 @@
         grid-area: location;
     }
 
-    h1 {
-        font-size: 80px;
-        line-height: 1;
+    h1 > span {
+        font-size: 15px;
 
-        > span {
+        @media (min-width: $media-sm) {
+            font-size: 20px;
+        }
+
+        @media (min-width: $media-lg) {
             font-size: 40px;
         }
     }
 
     .sw-coordinates span {
-        font-size: 20px;
+        font-size: 12px;
         line-height: 1;
+
+        @media (min-width: $media-lg) {
+            font-size: 20px;
+        }
     }
 
     .sw-coordinates span + span {
@@ -46,16 +53,25 @@
         display: flex;
         flex-direction: column;
         border-top: 1px solid rgba($c-secondary, 0.5);
-        padding: 40px 0 0;
-        margin: 40px 0;
+        padding: 20px 0 0;
+        margin: 20px 0 0;
 
         span {
             display: block;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 300;
             line-height: 1;
             letter-spacing: 1px;
             margin: 0 0 15px;
+        }
+
+        @media (min-width: $media-lg) {
+            padding: 40px 0 0;
+            margin: 40px 0;
+
+            span {
+                font-size: 20px;
+            }
         }
     }
 </style>

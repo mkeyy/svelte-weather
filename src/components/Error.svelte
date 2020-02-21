@@ -2,17 +2,16 @@
     import Search from './parts/Search.svelte';
 </script>
 
-<main class="sw-home sw-container">
-    <div class="sw-content">
-        <h1>Weather App</h1>
-        <Search/>
-    </div>
-</main>
+<div class="sw-error sw-container">
+    <h1>Ups!</h1>
+    <span>We are sorry but something went wrong. Please try again.</span>
+    <Search/>
+</div>
 
 <style lang="scss">
     @import "../assets/styles/settings.scss";
 
-    .sw-home {
+    .sw-error {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,8 +19,16 @@
         grid-area: content;
     }
 
-    h1 {
+    h2 {
         text-align: center;
         margin: 0 0 20px;
+    }
+
+    span {
+        display: block;
+        font-size: 16px;
+        line-height: 1.1;
+        text-align: center;
+        margin: 0 0 25px;
     }
 </style>

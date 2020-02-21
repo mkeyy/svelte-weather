@@ -13,7 +13,7 @@
 </script>
 
 <div class={`sw-search${header ? ' sw-search--header' : ''}`}>
-    <input id="city-search" type="search" placeholder="Search City"
+    <input id="city-search" type="search" placeholder="Search city..." autocomplete="off"
            on:keypress={e => e.keyCode === 13 ? handleSearch() : ''}>
 
     <button on:click={()=> handleSearch()}>
@@ -27,8 +27,12 @@
     .sw-search {
         position: relative;
         display: flex;
-        width: 400px;
+        width: 100%;
         margin: 0 auto;
+
+        @media (min-width: $media-lg) {
+            width: 400px;
+        }
     }
 
     input[type="search"] {
@@ -56,13 +60,18 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
-        padding: 0;
-        margin: 0 20px 0 0;
+        padding: 0 20px 0 0;
     }
 
     .sw-search--header {
-        width: 300px;
+        width: 100%;
+        order: 2;
         margin: 0;
+
+        @media (min-width: $media-lg) {
+            width: 300px;
+            order: 1;
+        }
 
         input[type="search"] {
             font-size: 14px;
@@ -71,7 +80,7 @@
         }
 
         button {
-            margin: 0 15px 0 0;
+            padding: 0 15px 0 0;
         }
     }
 

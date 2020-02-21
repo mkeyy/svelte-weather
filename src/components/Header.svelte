@@ -13,9 +13,15 @@
 
     .sw-header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         grid-area: header;
-        padding: 40px 15px 0;
+        padding: 30px 15px 0;
+
+        @media (min-width: $media-lg) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 15px 0;
+        }
     }
 </style>

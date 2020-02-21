@@ -14,9 +14,14 @@
 
 .sw-svg--sunrise,
 .sw-svg--sunset {
-  @include sw-size(140px, 120px);
-
+  display: none;
   margin: 0 0 -20px;
+
+  @media (min-width: $media-lg) {
+    @include sw-size(140px, 120px);
+
+    display: block;
+  }
 }
 
 .sw-svg--sunrise {

@@ -4,7 +4,7 @@
     let deg, compassSector, windDirection;
 
     data.subscribe(() => {
-        if($data.wind) {
+        if ($data.wind) {
             deg = $data.wind.deg ? $data.wind.deg : 0;
             compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
             windDirection = compassSector[Math.floor(deg / 22.5)];
@@ -34,7 +34,13 @@
 
     .sw-wind {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         grid-area: wind;
+
+        @media (min-width: $media-lg) {
+            flex-direction: row;
+        }
     }
 
     .sw-compass {
@@ -42,6 +48,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 0 20px;
+
+        @media (min-width: $media-lg) {
+            margin: 0;
+        }
     }
 
     .sw-compass .sw-compass__inner {
