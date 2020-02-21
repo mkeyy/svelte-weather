@@ -38,8 +38,15 @@
         align-items: center;
         grid-area: wind;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-sm) {
+            align-items: flex-start;
+            margin-left: 30px;
+        }
+
+        @media (min-width: $media-md) {
             flex-direction: row;
+            align-items: center;
+            margin-left: 0;
         }
     }
 
@@ -50,7 +57,7 @@
         align-items: center;
         margin: 0 0 20px;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-md) {
             margin: 0;
         }
     }
@@ -102,6 +109,14 @@
 
         strong {
             font-weight: 900;
+        }
+
+        @media (min-width: $media-sm) {
+            margin: 0;
+        }
+
+        @media (min-width: $media-md) {
+            margin: 0 45px;
         }
     }
 </style>

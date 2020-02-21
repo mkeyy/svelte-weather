@@ -30,14 +30,14 @@
         width: 100%;
         margin: 0 auto;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-sm) {
             width: 400px;
         }
     }
 
     input[type="search"] {
         width: 100%;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 1.2;
         color: $c-secondary;
@@ -49,6 +49,10 @@
 
         &::placeholder {
             color: rgba($c-secondary, 0.6);
+        }
+
+        @media (min-width: $media-md) {
+            font-size: 18px;
         }
     }
 
@@ -68,7 +72,7 @@
         order: 2;
         margin: 0;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-xs) {
             width: 300px;
             order: 1;
         }

@@ -17,14 +17,21 @@
 <style lang="scss">
     @import "../assets/styles/settings.scss";
 
+    .sw-city {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .sw-content {
         display: grid;
         grid-template-areas: "location" "weather" "wind" "sun";
         grid-template-columns: auto;
         grid-row-gap: 50px;
+        width: 100%;
         padding: 50px 0;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-sm) {
             grid-template-areas: "location weather" "wind sun";
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 60px;

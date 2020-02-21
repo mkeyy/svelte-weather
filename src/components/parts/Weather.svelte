@@ -34,7 +34,7 @@
             max-width: 80px;
             object-fit: contain;
 
-            @media (min-width: $media-lg) {
+            @media (min-width: $media-md) {
                 max-width: 100px;
             }
         }
@@ -43,7 +43,11 @@
             font-size: 16px;
             line-height: 1;
 
-            @media (min-width: $media-lg) {
+            @media (min-width: $media-sm) {
+                font-size: 20px;
+            }
+
+            @media (min-width: $media-md) {
                 font-size: 25px;
             }
         }
@@ -53,8 +57,12 @@
         font-size: 50px;
         line-height: 1.1;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-md) {
             font-size: 100px;
+        }
+
+        @media (min-width: $media-lg) {
+            font-size: 150px;
         }
     }
 

@@ -24,11 +24,19 @@
         grid-area: location;
     }
 
+    h1 {
+        text-align: center;
+
+        @media (min-width: $media-sm) {
+            text-align: left;
+        }
+    }
+
     h1 > span {
         font-size: 15px;
 
         @media (min-width: $media-sm) {
-            font-size: 20px;
+            font-size: 25px;
         }
 
         @media (min-width: $media-lg) {
@@ -36,9 +44,23 @@
         }
     }
 
+    .sw-coordinates {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 0;
+
+        @media (min-width: $media-sm) {
+            justify-content: flex-start;
+        }
+    }
+
     .sw-coordinates span {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1;
+
+        @media (min-width: $media-sm) {
+            font-size: 16px;
+        }
 
         @media (min-width: $media-lg) {
             font-size: 20px;
@@ -52,6 +74,7 @@
     .sw-stats {
         display: flex;
         flex-direction: column;
+        align-items: center;
         border-top: 1px solid rgba($c-secondary, 0.5);
         padding: 20px 0 0;
         margin: 20px 0 0;
@@ -65,7 +88,8 @@
             margin: 0 0 15px;
         }
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-sm) {
+            align-items: flex-start;
             padding: 40px 0 0;
             margin: 40px 0;
 

@@ -17,7 +17,7 @@
         grid-area: header;
         padding: 30px 15px 0;
 
-        @media (min-width: $media-lg) {
+        @media (min-width: $media-xs) {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;

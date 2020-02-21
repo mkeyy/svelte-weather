@@ -3,8 +3,8 @@
 </script>
 
 <div class="sw-error sw-container">
-    <h1>Ups!</h1>
-    <span>We are sorry but something went wrong. Please try again.</span>
+    <h1>Ooops!</h1>
+    <span>Something went wrong. Try again.</span>
     <Search/>
 </div>
 
@@ -19,16 +19,20 @@
         grid-area: content;
     }
 
-    h2 {
+    h1 {
         text-align: center;
-        margin: 0 0 20px;
+        margin: 0 0 10px;
     }
 
     span {
         display: block;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.1;
         text-align: center;
-        margin: 0 0 25px;
+        margin: 0 0 40px;
+
+        @media (min-width: $media-md) {
+            font-size: 40px;
+        }
     }
 </style>
