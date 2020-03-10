@@ -55,6 +55,7 @@
 
     .sw-temp {
         font-size: 50px;
+        font-weight: 700;
         line-height: 1.1;
 
         @media (min-width: $media-md) {
