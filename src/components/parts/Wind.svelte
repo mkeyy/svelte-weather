@@ -94,6 +94,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         margin: 0 45px;
 
         span {
@@ -112,6 +113,7 @@
         }
 
         @media (min-width: $media-sm) {
+            text-align: left;
             margin: 0;
         }
 
