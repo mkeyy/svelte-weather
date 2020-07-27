@@ -75,6 +75,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         border-top: 1px solid rgba($c-secondary, 0.5);
         padding: 20px 0 0;
         margin: 20px 0 0;
@@ -83,9 +84,9 @@
             display: block;
             font-size: 15px;
             font-weight: 300;
-            line-height: 1;
+            line-height: 1.2;
             letter-spacing: 1px;
-            margin: 0 0 15px;
+            margin: 0 0 10px;
         }
 
         @media (min-width: $media-sm) {
@@ -95,6 +96,7 @@
 
             span {
                 font-size: 20px;
+                margin: 0 0 20px;
             }
         }
     }
