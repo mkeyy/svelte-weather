@@ -15,68 +15,62 @@
 </div>
 
 <style lang="scss">
-    @import "../../assets/styles/settings.scss";
+  @import "../../assets/styles/settings.scss";
 
-    .sw-weather {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        grid-area: weather;
-        margin: -20px 0 0;
+  .sw-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: weather;
+    margin: -20px 0 0;
+  }
+
+  .sw-condition {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 80px;
+      object-fit: contain;
+
+      @media (min-width: $media-md) {
+        max-width: 100px;
+      }
     }
 
-    .sw-condition {
-        display: flex;
-        align-items: center;
+    span {
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      padding: 0 20px 0 0;
 
-        img {
-            max-width: 80px;
-            object-fit: contain;
+      @media (min-width: $media-sm) {
+        font-size: 20px;
+      }
 
-            @media (min-width: $media-md) {
-                max-width: 100px;
-            }
-        }
+      @media (min-width: $media-md) {
+        font-size: 25px;
+      }
+    }
+  }
 
-        span {
-            font-size: 16px;
-            line-height: 1;
+  .sw-temp {
+    font-size: 20vmin;
+    font-weight: 700;
+    line-height: 1.1;
+  }
 
-            @media (min-width: $media-sm) {
-                font-size: 20px;
-            }
+  .sw-temp-feels {
+    font-size: 5.5vmin;
+    line-height: 1.5;
 
-            @media (min-width: $media-md) {
-                font-size: 25px;
-            }
-        }
+    strong {
+      font-weight: 900;
     }
 
-    .sw-temp {
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 1.1;
-
-        @media (min-width: $media-md) {
-            font-size: 100px;
-        }
-
-        @media (min-width: $media-lg) {
-            font-size: 150px;
-        }
+    @media (min-width: $media-lg) {
+      font-size: 4vmin;
     }
-
-    .sw-temp-feels {
-        font-size: 16px;
-        line-height: 1.1;
-
-        strong {
-            font-weight: 900;
-        }
-
-        @media (min-width: $media-lg) {
-            font-size: 20px;
-        }
-    }
+  }
 </style>

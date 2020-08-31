@@ -9,7 +9,7 @@
 
     search.subscribe(() => {
         if ($search) {
-            fetch(`${process.env.API_URL}?q=${$search}&appid=${process.env.API_KEY}&units=metric`)
+            fetch(`${process.env.API_URL}?q=${$search}&appid=${process.env.API_KEY}&units=metric&lang=en`)
                     .then(res => res.json())
                     .then(json => {
                         data.set(json);
